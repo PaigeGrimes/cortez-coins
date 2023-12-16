@@ -246,38 +246,6 @@ textarea {
     page-break-after: avoid;
   }
 }
-header {
-    background-color: #cabe50;
-    color: #fff;
-    text-align: left;
-    padding: 0.5em 1em;
-    height: 6em;
-}
-
-header h1 {
-  font-size: 2em;
-  line-height: 0.6em;
-  margin: auto;
-  color: #000000;
-
-}
-/* Slideshow container */
-.slideshow-container {
-  max-width: 800px; /* Set your desired max-width */
-  position: relative;
-  margin: auto;
-  overflow: hidden; /* Ensures images don't overflow the container */
-}
-
-/* Images within the slideshow */
-.mySlides img {
-  width: 100%; /* Ensures images take up 100% of their container */
-  height: 350px; /* Maintains aspect ratio */
-  object-fit: cover; /* Keeps the aspect ratio and fills the container */
-}
-
-
-
 /* Previous & Next buttons */
 .prev, .next {
   cursor: pointer;
@@ -325,6 +293,38 @@ header h1 {
     opacity: 1;
   }
 }
+/* Start my CSS
+  Header styling */
+
+header {
+    background-color: #cabe50;
+    color: #fff;
+    text-align: left;
+    padding: 0.5em 1em;
+    height: 6em;
+}
+
+header h1 {
+  font-size: 2em;
+  line-height: 0.6em;
+  margin: auto;
+  color: #000000;
+
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 800px; /* Set your desired max-width */
+  position: relative;
+  margin: auto;
+  overflow: hidden; /* Ensures images don't overflow the container */
+}
+
+/* Images within the slideshow */
+.mySlides img {
+  width: 100%; /* Ensures images take up 100% of their container */
+  height: 350px; /* Maintains aspect ratio */
+  object-fit: cover; /* Keeps the aspect ratio and fills the container */
+}
 
 body {
   overflow-x: hidden;
@@ -367,7 +367,7 @@ nav ul li a:hover {
 
 /* Style for selected/active link */
 nav ul li a.selected {
-    font-weight: bold; /* Example: Bold font for selected link */
+    font-weight: bold; /* Bold font for selected link */
     text-shadow: 3px 5px 5px rgb(202, 190, 80); /* Example: Different color for selected link */
 
 
