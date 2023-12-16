@@ -1,0 +1,643 @@
+/*! HTML5 Boilerplate v9.0.0-RC1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+header {
+    background-color: #cabe50;
+    color: #fff;
+    text-align: left;
+    padding: 0.5em 1em;
+    height: 6em;
+}
+
+header h1 {
+  font-size: 2em;
+  line-height: 0.6em;
+  margin: auto;
+  color: #000000;
+
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 800px; /* Set your desired max-width */
+  position: relative;
+  margin: auto;
+  overflow: hidden; /* Ensures images don't overflow the container */
+}
+
+/* Images within the slideshow */
+.mySlides img {
+  width: 100%; /* Ensures images take up 100% of their container */
+  height: 350px; /* Maintains aspect ratio */
+  object-fit: cover; /* Keeps the aspect ratio and fills the container */
+}
+
+
+
+/* Previous & Next buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Position the Previous button */
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Position the Next button */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit of transparency */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Fade animation for images */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Set the minimum height of the body to the viewport height */
+  margin: auto;
+  font-size: 1rem;
+  transition: font-size 0.3s ease;
+}
+/* Nav css */
+nav {
+    text-align: right;
+    background-color: #130d0d;
+    padding: 1em;
+    font-size: 1em;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Hover effect */
+nav ul li a:hover {
+    color: rgb(202, 190, 80); /* Change color on hover */
+}
+
+/* Style for selected/active link */
+nav ul li a.selected {
+    font-weight: bold; /* Example: Bold font for selected link */
+    text-shadow: 3px 5px 5px rgb(202, 190, 80); /* Example: Different color for selected link */
+
+
+}
+
+.container {
+  min-height: 100vh;
+  flex: 1; /* Allow container to grow and take remaining space */
+  padding: 1em; /* Adjust padding for content inside */
+  margin: auto;
+  max-width: 800px;
+  width:100%;
+}
+
+main {
+  text-align: inherit; /* Center aligns the paragraph */
+}
+
+
+/* widget grid containers */
+.grid-container {
+  display: grid;
+  gap: 20px; /* Adjust the gap between widgets */
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+}
+
+.widget {
+  padding: 1em;
+  border: 1px solid #ccc;
+}
+
+.top-widget {
+  grid-column: span 2; /* Spans both columns in the top row */
+  padding: 1em;
+}
+
+/* footer */
+footer {
+  background-color: rgba(241, 241, 241, 0.74);
+  border-top: solid 4px;
+  color: #130d0d;
+  text-align: center;
+  padding: 0 0 1em 0; /* Adjust as needed */
+}
+
+.footer-content {
+  max-width: 500px;
+  margin: 0 auto;
+
+}
+
+.footer-content h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-bottom: 10px; /* Increase space between header and content */
+}
+
+.footer-content p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 0.5em; /* Increase space between paragraphs */
+}
+
+.socials a {
+  display: inline-block;
+}
+
+.socials img {
+  vertical-align: middle; /* Align the social icons properly */
+}
+
+.copyright {
+  margin-top: 1em; /* Add space between content and copyright */
+}
+
+
+.socials {
+  margin-top: 0;
+  display: inline-block;
+  justify-content: center;
+  text-align: center;
+  gap: 10px; /* Adjust space between social icons */
+  background-color: #000000;
+  height:2em;
+  list-style-type: none; /* Remove default list styles */
+  padding: 20px 0 50px;
+  width:100%;
+  color: #e3e0e0;
+}
+
+.footer-content p {
+  max-width: 500px;
+  margin:0;
+  line-height: 1.5;
+  font-size: 14px;
+  color: #130d0d;
+}
+
+/* About Page styles */
+
+.mission-statement {
+    background-color: #f9f9f9;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.mission-statement h3 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.mission-statement p {
+    font-size: 1em;
+    line-height: 1.4;
+    color: #666;
+  text-align: justify;
+}
+
+
+.about_container {
+  max-width: 800px; /* Adjust as needed */
+  min-height: 80vh;
+  flex: 1; /* Allow container to grow and take remaining space */
+  padding: 1em; /* Adjust padding for content inside */
+  margin: auto;
+}
+
+.about_container::after {
+  content: "";
+  display: table;
+  clear: both;
+  margin:0;
+}
+
+.image-container {
+  float: left;
+  margin-right: 1em; /* Add space between image and text */
+  margin-top: 1em;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text-container {
+  overflow: hidden;
+}
+.column-container {
+    display: flex;
+  width:100%;
+}
+
+.column {
+    flex: 1;
+    margin-right: 1em; /* Adjust spacing between columns */
+}
+
+h3 {
+    display: inline;
+    margin-bottom: 0.5em; /* Space between h3 and paragraph */
+}
+
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .widget {
+  grid-column: span 2;
+}
+
+  .about_container {
+    display: block;
+    flex-direction: column; /* On smaller screens, switch to a column layout */
+    margin: 0;
+  }
+
+  .image-container,
+  .text-container {
+    width: 100%;
+    float: none;
+  }
+
+  .image-container {
+    margin-bottom: 1em; /* Add space between image and text on smaller screens */
+  }
+
+  .column-container {
+    display: block; /* Switch to a block layout on smaller screens */
+  }
+  .column {
+  flex: none; /* Reset flex to occupy full width */
+  margin-right: 0; /* Remove margin between columns on smaller screens */
+  width: 100%; /* Ensure columns take up full width on smaller screens */
+  margin-bottom: 1em;
+}
+  h3 {
+    margin-bottom: 5px; /* Reduce space between h3 and paragraph on smaller screens */
+  }
+  }
+@media screen and (max-width: 1024px) {
+  .about_container {
+    display: block;
+    flex-direction: column;
+    margin: 0;
+  }
+}
+
+ul.no-bullets {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
+/* Responsive Google Maps */
+.google-maps {
+    position: relative;
+    padding-bottom: 100%;
+    height: 0;
+    overflow: hidden;
+  }
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+/* Payment Icons */
+.payment_images {
+
+  margin: auto;
+  display: inline;
+  justify-content: center;
+  gap: 10px;
+}
+
+.payment_images img{
+  text-align: center;
+  width: 32px; /* Adjust the desired width */
+  height: 32px; /* Adjust the desired height */
+}
+
+#textSizeControl {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  gap: 10px;
+  background-color: rgb(49, 46, 46);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  background-color: #cabe50;
+  color: #130d0d;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: rgba(202, 190, 80, 0.7);
+}
